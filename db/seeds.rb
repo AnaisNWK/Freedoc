@@ -22,7 +22,7 @@ Doctor.destroy_all
 	doctor = Doctor.create!(
 		first_name: Faker::Name.first_name,
 		last_name: Faker::Name.last_name,
-		specialty: ["Dermatologue", "Généraliste", "Gynecologue", "Ophtalmologue", "ORL"].sample,
+		# specialty: ["Dermatologue", "Généraliste", "Gynecologue", "Ophtalmologue", "ORL"].sample,
 		zip_code: Faker::Number.within(range: 01000..95999),
 		city: City.all.sample
 	)
@@ -50,3 +50,20 @@ Appointment.destroy_all
 	)
 puts  "Appointments created"
 end 
+
+Specialty.destroy_all
+12.times do |i|
+	specialty = Specialty.create!(
+		name: ["Dermatologue", "Généraliste", "Gynecologue", "Ophtalmologue", "ORL"].sample
+		)
+puts "Specialities created"
+end
+
+SpecialtyDoctorJoin.destroy_all
+23.times do |i|
+	specialty_doctor_join = SpecialtyDoctorJoin.create!(
+			doctor: Doctor.all.sample,
+			specialty: Specialty.all.sample
+		)
+puts "SpecialtyDoctorJoins created"
+end
