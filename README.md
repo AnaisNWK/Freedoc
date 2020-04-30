@@ -1,24 +1,17 @@
-# README
+# FREEDOC
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Back-end de l'application FreeDoc 
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version : '2.5.1'
+* gem 'Rails' : '5.2.4'
 
-* System dependencies
+DataBase FreeDoc 
+* Table Doctor
+* Table Patient
+* Table Appointment (join)
+* Table City
+* Table Specialty
+* Table SpecialtyDoctorJoin (join)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
